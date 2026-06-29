@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistemas Operacionais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="progressBar"></div>
+
+<div class="sidebar">
+  <h2>Sistemas</h2>
+  <a href="#inicio">Início</a>
+  <a href="#ios">iOS</a>
+  <a href="#android">Android</a>
+  <a href="#linux">Linux</a>
+  <a href="#windows">Windows</a>
+  <a href="#comparacao">Comparação</a>
+  <a href="#quiz">Quiz</a>
+</div>
+
+<div class="content">
+
+<!-- INÍCIO -->
+<section id="inicio">
+  <h1>Sistemas Operacionais</h1>
+
+  <p>
+    Um sistema operacional é o software responsável por gerenciar todos os recursos de um computador ou dispositivo móvel.
+    Ele atua como intermediário entre o hardware e o usuário, permitindo que programas funcionem corretamente.
+  </p>
+
+  <h3>Funções principais</h3>
+  <ul>
+    <li>Gerenciar memória e processamento</li>
+    <li>Controlar dispositivos de hardware</li>
+    <li>Executar aplicativos</li>
+    <li>Garantir segurança do sistema</li>
+  </ul>
+</section>
+
+<!-- IOS -->
+<section id="ios">
+  <h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="logo">
+    iOS
+  </h1>
+
+  <p>
+    O iOS é o sistema operacional móvel da Apple, usado em iPhones. Ele é conhecido por sua segurança e desempenho otimizado.
+  </p>
+
+  <h3>História</h3>
+  <p>
+    Lançado em 2007 junto com o primeiro iPhone, revolucionou o mercado ao trazer interface totalmente baseada em toque.
+  </p>
+
+  <h3>Características</h3>
+  <ul>
+    <li>Sistema fechado</li>
+    <li>Alta segurança</li>
+    <li>Atualizações rápidas</li>
+  </ul>
+</section>
+
+<!-- ANDROID -->
+<section id="android">
+  <h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" class="logo">
+    Android
+  </h1>
+
+  <p>
+    O Android é um sistema operacional baseado no Linux, desenvolvido pelo Google e usado por diversos fabricantes.
+  </p>
+
+  <h3>Características</h3>
+  <ul>
+    <li>Sistema aberto</li>
+    <li>Alta personalização</li>
+    <li>Grande variedade de dispositivos</li>
+  </ul>
+</section>
+
+<!-- LINUX -->
+<section id="linux">
+  <h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" class="logo">
+    Linux
+  </h1>
+
+  <p>
+    O Linux é um sistema open-source criado por Linus Torvalds, muito usado em servidores e sistemas profissionais.
+  </p>
+
+  <h3>Características</h3>
+  <ul>
+    <li>Código aberto</li>
+    <li>Seguro e estável</li>
+    <li>Muito usado em servidores</li>
+  </ul>
+</section>
+
+<!-- WINDOWS -->
+<section id="windows">
+  <h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg" class="logo">
+    Windows
+  </h1>
+
+  <p>
+    O Windows é o sistema operacional mais usado em computadores pessoais no mundo, desenvolvido pela Microsoft.
+  </p>
+
+  <h3>Características</h3>
+  <ul>
+    <li>Alta compatibilidade</li>
+    <li>Interface simples</li>
+    <li>Ideal para jogos e trabalho</li>
+  </ul>
+</section>
+
+<!-- COMPARAÇÃO -->
+<section id="comparacao">
+  <h1>Comparação</h1>
+
+  <table>
+    <tr>
+      <th>Sistema</th>
+      <th>Segurança</th>
+      <th>Uso</th>
+    </tr>
+    <tr><td>iOS</td><td>★★★★★</td><td>Mobile</td></tr>
+    <tr><td>Android</td><td>★★★☆☆</td><td>Mobile</td></tr>
+    <tr><td>Linux</td><td>★★★★★</td><td>Servidores</td></tr>
+    <tr><td>Windows</td><td>★★★☆☆</td><td>PC</td></tr>
+  </table>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz">
+  <h1>Quiz (10 perguntas)</h1>
+
+  <div class="quiz-box">
+
+    <p>1) Android é baseado em qual sistema?</p>
+    <button onclick="responder('q1','linux', this)">Linux</button>
+
+    <p>2) Criador do Linux?</p>
+    <button onclick="responder('q2','linus', this)">Linus Torvalds</button>
+
+    <p>3) Sistema da Apple?</p>
+    <button onclick="responder('q3','ios', this)">iOS</button>
+
+    <p>4) Windows é da?</p>
+    <button onclick="responder('q4','microsoft', this)">Microsoft</button>
+
+    <p>5) Android é do?</p>
+    <button onclick="responder('q5','google', this)">Google</button>
+
+    <p>6) Linux é?</p>
+    <button onclick="responder('q6','open', this)">Open Source</button>
+
+    <p>7) Sistema mais usado em PCs?</p>
+    <button onclick="responder('q7','windows', this)">Windows</button>
+
+    <p>8) iOS é exclusivo de?</p>
+    <button onclick="responder('q8','apple', this)">Apple</button>
+
+    <p>9) Android permite?</p>
+    <button onclick="responder('q9','custom', this)">Personalização</button>
+
+    <p>10) Linux é muito usado em?</p>
+    <button onclick="responder('q10','servers', this)">Servidores</button>
+
+    <br><br>
+    <button onclick="mostrarResultado()">Ver Resultado</button>
+
+    <h2 id="resultadoQuiz"></h2>
+  </div>
+</section>
+
+</div>
+
+<button id="topButton" onclick="voltarTopo()">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
